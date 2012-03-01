@@ -1,4 +1,6 @@
 
+dist_dirs = [ "lib", "test", "db" ]
+
 Gem::Specification.new do |s|
   s.name = "feedtools"
   s.version = "0.2.29"
