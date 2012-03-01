@@ -1,7 +1,7 @@
 
 Gem::Specification.new do |s|
-  s.name = PKG_NAME
-  s.version = PKG_VERSION
+  s.name = "feedtools"
+  s.version = "0.2.29"
   s.summary = "Parsing, generation, and caching system for xml news feeds."
   s.description = "Implements a simple system for handling xml news feeds with caching."
 
