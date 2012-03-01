@@ -39,8 +39,11 @@ module FeedTools
       if @idn_enabled.nil? || @idn_enabled == false
         @idn_enabled = false
         begin
+          require 'base64'
           require 'idn'
-          if IDN::Idna.toASCII('http://www.詹姆斯.com/') ==
+          # 'http://www.詹姆斯.com/'
+          b64_str = Base64.decode64('aHR0cDovL3d3dy7oqbnlp4bmlq8uY29tLw==\n')
+          if IDN::Idna.toASCII(b64_str) ==
             "http://www.xn--8ws00zhy3a.com/"
             @idn_enabled = true
           else
